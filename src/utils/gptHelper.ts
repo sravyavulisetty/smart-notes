@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const GEMINI_API_KEY = "AIzaSyDO0n2s-gfOVaMN27IqVw-8XXnxxwNgppM";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const suggestTitle = async(noteContent: string) => {
     const prompt = `Suggest only one short, relavant title for this note: ${noteContent},  Do not include any introductory or summary lines.`;
